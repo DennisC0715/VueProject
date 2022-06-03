@@ -6,39 +6,57 @@
           <UpvoteButton
             v-for="(item, i) in container1"
             :key="i"
-            :color="[
-              UpvoteButton1State ? UpvoteButton2Color : UpvoteButton1Color,
-            ]"
+            :color="
+              UpvoteButton1State ? UpvoteButton2Color : UpvoteButton1Color
+            "
             @click="toggleColor1"
           />
         </div>
-        <button class="btn" @click="addUpvote1">+</button>
+        <button
+          class="btn"
+          @click="addUpvote1"
+          :disabled="container1.length > 5"
+        >
+          +
+        </button>
       </div>
       <div class="smallContainer">
         <div class="rectangular">
           <UpvoteButton
             v-for="(item, i) in container2"
             :key="i"
-            :color="[
-              UpvoteButton2State ? UpvoteButton1Color : UpvoteButton2Color,
-            ]"
+            :color="
+              UpvoteButton2State ? UpvoteButton1Color : UpvoteButton2Color
+            "
             @click="toggleColor2"
           />
         </div>
-        <button class="btn" @click="addUpvote2">+</button>
+        <button
+          class="btn"
+          @click="addUpvote2"
+          :disabled="container2.length > 5"
+        >
+          +
+        </button>
       </div>
       <div class="smallContainer">
         <div class="rectangular">
           <UpvoteButton
             v-for="(item, i) in container3"
             :key="i"
-            :color="[
-              UpvoteButton3State ? UpvoteButton1Color : UpvoteButton3Color,
-            ]"
+            :color="
+              UpvoteButton3State ? UpvoteButton1Color : UpvoteButton3Color
+            "
             @click="toggleColor3"
           />
         </div>
-        <button class="btn" @click="addUpvote3">+</button>
+        <button
+          class="btn"
+          @click="addUpvote3"
+          :disabled="container3.length > 5"
+        >
+          +
+        </button>
       </div>
     </div>
   </div>
