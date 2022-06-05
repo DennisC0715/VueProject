@@ -4,7 +4,8 @@
   "scripts": {
     "build": "vite build",
     "test:unit": "vue-cli-service test:unit",
-    "dev": "vite"
+    "dev": "vite",
+    "start": "vite"
   },
   "dependencies": {
     "vue": "^3.0.4",
